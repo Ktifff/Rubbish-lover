@@ -133,12 +133,12 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 55
-        width: 9
-        height: 9
+        y: 56
+        width: 8
+        height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 1, z: 1, w: 1}
       customData: 
       outline: []
       physicsShape: []
@@ -154,12 +154,12 @@ TextureImporter:
       name: UI_1
       rect:
         serializedVersion: 2
-        x: 15
-        y: 47
-        width: 34
-        height: 17
+        x: 16
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -172,11 +172,55 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: UI_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a502073bc0f2c439a157b20d9d06f2
+      internalID: -1036212295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab716268fc1fd24ebdb6df7ef3ac448
+      internalID: 870607414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: dd2a859830381d844b6dfcecb5cf3307
     internalID: 0
     vertices: []
     indices: 
@@ -188,6 +232,8 @@ TextureImporter:
     nameFileIdTable:
       UI_0: -1557013538026691241
       UI_1: 82707731993968007
+      UI_2: -1036212295
+      UI_3: 870607414
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
