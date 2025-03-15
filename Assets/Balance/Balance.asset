@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Balance
   m_EditorClassIdentifier: 
   AchievementsData:
-  - Name: 
-    Description: 
-  - Name: 
-    Description: 
-  - Name: 
-    Description: 
+  - Name: First time!
+    Description: Dispose of garbage once
+  - Name: Paper boeing
+    Description: Dispose of 5 kg of paper
+  - Name: Clear ocean
+    Description: Dispose of 10 kg of plastic
   Levels:
   - Name: Crook
     ExpCount: 0

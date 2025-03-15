@@ -1,24 +1,24 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
-using static UnityEngine.UIElements.UxmlAttributeDescription;
 
+[Serializable]
 public class User
 {
-    public int Level { get; private set; }
-    public int Exp { get; private set; }
-    public Pet Pet { get; private set; }
-    public List<Achievement> Achievements { get; private set; }
-    public List<Rubbish> Rubbish { get; private set; }
+    public int Level;
+    public int Exp;
+    public Pet Pet;
+    public List<Achievement> Achievements = new List<Achievement>();
+    public List<Rubbish> Rubbish = new List<Rubbish>();
     public Action<int, float> OnExpChanged { get; set; }
 
-    public User()
+    public User(bool createAchiv = true)
     {
         Level = 1;
         Exp = 0;
         Pet = new Pet();
         Achievements = new List<Achievement>();
-        for (int i = 0; i < GameManager.GameBalance.AchievementsData.Count; i++) Achievements.Add(new Achievement());
+        if (createAchiv) for (int i = 0; i < GameManager.GameBalance.AchievementsData.Count; i++) Achievements.Add(new Achievement());
         Rubbish = new List<Rubbish>();
         for (int i = 0; i < 3; i++) Rubbish.Add(new Rubbish(i, 0));
     }
@@ -42,9 +42,10 @@ public class User
     }
 }
 
+[Serializable]
 public class Pet
 {
-    public float Satiety { get; private set; }
+    public float Satiety;
     public Action<float> OnSatietyChanged { get; set; }
 
     private const float HungrySpeed = 0.2f;
@@ -81,11 +82,13 @@ public class Pet
     }
 }
 
+[Serializable]
 public class Rubbish
 {
-    private int _id;
-    public float Count { get; private set; }
+    public int _id;
+    public float Count;
     public Action<int, float> OnCountChanged { get; set; }
+    public float Disposed;
 
     public const int Max = 10;
 
@@ -103,21 +106,20 @@ public class Rubbish
 
     public void Use(float count)
     {
+        Disposed += count;
         Count = Mathf.Max(Count - count, 0);
         OnCountChanged?.Invoke(_id, Count);
     }
 }
 
+[Serializable]
 public class Achievement
 {
-    public bool Unlocked { get; private set; }
+    public bool Unlocked;
 
-    public Achievement()
-    {
-        Unlocked = false;
-    }
+    public Action OnAchievementUnlocked { get; set; }
 
-    public Achievement(bool unlocked)
+    public Achievement(bool unlocked = false)
     {
         Unlocked = unlocked;
     }
@@ -125,6 +127,8 @@ public class Achievement
     public void Unlock()
     {
         Unlocked = true;
+        OnAchievementUnlocked?.Invoke();
     }
 }
 
+enum RabbishType { Paper, Plastic, Glass }
