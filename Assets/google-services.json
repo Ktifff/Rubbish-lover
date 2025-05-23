@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "719355802770",
+    "project_id": "rubbish-lover",
+    "storage_bucket": "rubbish-lover.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:719355802770:android:ab793a32e6a44f8b38e24b",
+        "android_client_info": {
+          "package_name": "com.Ktifo.RubbishLover"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "719355802770-42nu79lraq72mcn6hd5npsshf9ajhffi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.Ktifo.RubbishLover",
+            "certificate_hash": "f49a6d03333c33359a3f153561c78deea7bc41d6"
+          }
+        },
+        {
+          "client_id": "719355802770-g45tfevjlgokb2f53eg3eipmskvod3ti.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCO2i17Em-rxuEHRl93GBzVBYzb7lq4jl8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "719355802770-g45tfevjlgokb2f53eg3eipmskvod3ti.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

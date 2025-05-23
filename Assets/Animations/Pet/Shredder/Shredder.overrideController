@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shredder
+  m_Controller: {fileID: 9100000, guid: a28c2687830236c469d473e809ca7430, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 55b01b958e3177e4c9c935fccda534d4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 0c6affc8456f00b4189d892b89719ab0, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 75997b4581c23da438dc6dfff6efd60b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6f8aa9bcd2bc79c4e94eb9e4f711fd7d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4096b2a6c1502d74a888ce5f3d65e6ba, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7fd5a169fd532414ea39e45e194959fb, type: 2}
