@@ -56,7 +56,11 @@ public class User
     public void Load()
     {
         _achievements = new List<Achievement>();
-        for (int i = 0; i < SerializedAchievements.Count; i++)_achievements.Add(SerializedAchievements[i].DeserializedAchievement);
+        for (int i = 0; i < SerializedAchievements.Count; i++)
+        {
+            _achievements.Add(SerializedAchievements[i].DeserializedAchievement);
+            _achievements[i]._reward = Achievements[i]._reward;
+        }
     }
 
     public void Save()
@@ -160,7 +164,11 @@ public class User
         }
         if (_achievements.Count < Achievements.Count)
         {
-            for (int i = _achievements.Count; i < Achievements.Count; i++) _achievements.Add(Achievements[i]);
+            for (int i = _achievements.Count; i < Achievements.Count; i++)
+            {
+                _achievements.Add(Achievements[i]);
+                _achievements[i]._id = i;
+            }
         }
     }
 
@@ -323,14 +331,15 @@ public class SerializableAchievement
     }
 }
 
-[Serializable]
+[FirestoreData]
 public abstract class Achievement
 {
     public Action<string> OnConditionProgressChanged { get; set; }
     public Action OnConditionCompleted { get; set; }
 
+    public int _id;
     public bool _isUnlocked;
-    private Reward _reward;
+    public Reward _reward;
 
     public bool IsUnlocked => _isUnlocked;
     public abstract string ConditionProgress { get; }
@@ -362,7 +371,7 @@ public abstract class Achievement
     }
 }
 
-[Serializable]
+[FirestoreData]
 public class ResourceScanAchievement : Achievement
 {
     public override string ConditionProgress
@@ -402,7 +411,7 @@ public class ResourceScanAchievement : Achievement
     }
 }
 
-[Serializable]
+[FirestoreData]
 public class ResourceUseAchievement : Achievement
 {
     public override string ConditionProgress

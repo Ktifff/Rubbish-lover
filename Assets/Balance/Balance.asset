@@ -60,7 +60,7 @@ MonoBehaviour:
     Description: Feed your pet 2 kg of glass
   - Image: {fileID: -2141539952, guid: 8e4d9aff7ccb8cd438dd8c62d8c01817, type: 3}
     Name: Printing factory
-    Description: Feed your pet 7 kg of paper
+    Description: Feed your pet 5 kg of paper
   Levels:
   - Name: Novice
     ExpCount: 0
